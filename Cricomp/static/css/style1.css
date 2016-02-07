@@ -1,25 +1,57 @@
-.empty{
-	visibility:hidden;
+body{
+	background:#E0F2F1;
+}
+
+.card h2{
+	font-size:25px;
+	text-align:center;
+
+}
+
+nav{
+	height:160px;
+	z-index:-9;
+}
+
+#nav{
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+}
+
+
+#master-wrapper{
+	//position:absolute;
+	z-index:999;
+	top:120px;
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
 }
 
 #main-banner{
+	background:url('../images/cricomp_banner.jpg');
+	color:#FF5722;
+}
+
+#brand-logo-tag-container{
 	width:100%;
-	height:472.5px;
-	float:left;
-	background-image:url('../images/cricomp_banner.jpg');
-	background-size:100% 472.5px;
-	background-position:center;
-	background-attachment: fixed;	
+	background:#212121;
+	background-image:url('../images/speed-ball.png');
+	background-size:215px 140px;
+	background-repeat:no-repeat;
+	height:140px;
 }
 
-#main-banner h1,
-#main-banner h2{
-	color:#F44336;
-	text-align:center;
+
+#brand-logo-tag{
+	color:#FF5722;
+	font-weight:bold;
+	font-size:30px;	
 }
 
-#main-banner h2{
-	font-size:20px;
+.empty{
+	visibility:hidden;
 }
 
 #close-signup-form{
@@ -30,26 +62,35 @@
 	text-align:center;
 }
 
+
+#score-cards{
+	}
+
 #score-cards h3{
 	text-align:center;
 }
 
-#fixed-nav{
-	position:fixed;
-	top:0;
-	width:100%;
-	z-index:9999;
+
+
+#signup-trigger-homepage{
+	float:right;
+	color:#000;
+	font-size:20px;
+	cursor:pointer;
+
 }
 
-#nav-gap{
-	width:100%;
-	height:70px;
-	float:left;
+#signup-trigger-homepage-icon{
+	margin-top:10px;
+	border:1px solid #FFF;
+	border-radius:50px;
 }
 
 #signup-form-screen{
 	width:100%;
 	height:100%;
+	top:0;
+	left:0;
 	position:fixed;
 	background:rgba(200,200,200,0.6);
 	z-index:99999;
@@ -58,9 +99,66 @@
 
 #signup-form-page{
 	width:50%;
-	margin-left:25%;
-	margin-right:25%;
-	margin-top:1%;
+	margin-left:20%;
+	margin-right:20%;
+	height:70%;
+	margin-top:5%;
+	}
+
+#predict-to-win{
+	background:#01579B;
+	color:#FFF;
+	text-transform:uppercase;
+	opacity:1;
+	width:30%;
+	margin-left:35%;
+	margin-right:35%;
+}
+
+#predict-to-win:hover{
+	opacity:0.8;
+	transition:0.4s opacity;
+}
+
+#predict-to-win h2{
+	font-size:20px;
+}
+
+.trophy-svg{
+	width:30px;
+	margin-right:20px;
+	margin-left:20px;
+
+	}
+
+#news-card,
+#tweet-card{
+	//position:absolute;
+	//height:500px;
+	//right:0;
+	//width:270px;
+}
+
+#tweet-card{
+	top:520px;
+}
+
+#other-logins{
+	text-align:center;
+}
+
+#other-logins a{
+	display:block;
+	width:400px;
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	font-size:20px;
+}
+
+#main-content-body{
+	margin-top:-100px;
 }
 
 @media all and (max-width:600px){
@@ -72,6 +170,14 @@
 	}
 	
 	
+}
+
+#signup-form{
+	text-align:center;
+}
+
+#sitemap{
+	//margin-top:400px;
 }
 
 #sitemap a{
