@@ -12,16 +12,79 @@
 <link type="text/css" rel="stylesheet" href="{% static "css/style1.css" %}">
 
 <body>
+<div id="nav"> 
 
+<div id="brand-logo-tag-container">
+
+<div style="padding-top:70px;padding-bottom:20px;" class="container">
+  <a id="brand-logo-tag" href="#" class="brand-logo">CRICOMP</a>
+  <span id="signup-trigger-homepage">
+  <i id="signup-trigger-homepage-icon" class="white-text material-icons">perm_identity</i><a href="#"></a>
+  <span class="white-text">My Cricomp</span>
+  </span>
+</div>
+</div>
+{% block scorecards%}{% endblock %}
+</div><!-- nav -->
+<div id="signup-form-screen">
+	<div class="card" id="signup-form-page">
+	<div class="row">
+	<div class="col s12">
+	<a href="#" id="close-signup-form">close</a>
+	</div>
+	</div>
+	
+	
+	<div id="login-form" class="row container">
+	<h5>LOGIN</h5>
+	<form name="user-login-form" method="post">
+	<div class="input-field col s5">
+		<input type="email" name="login-emailid" class="validate" required autofocus>
+		 <label for="email_id">Email Id</label>
+		</div>
+		
+		<div class="input-field col s5">
+		<input type="password" name="login-password" required>
+		 <label for="password">Password</label>
+		</div>
+		<div class="center-form-btn input-field col s2">
+		<button class="btn">LOGIN</button>
+		</div>
+		 <span style="color:#000;font-size:12px;display:block;width:100%;float:left;">
+		 <a href="forgot.php">Forgot Password?</a>
+		
+		</span>
+	</form>
+	</div><!-- login-form -->
+	<div id="other-logins" class="container">
+	<ul>
+	<li><a class="blue darken-4 white-text" href="#">FACEBOOK LOGIN</a></li>
+	<li><a class="deep-orange darken-4 white-text" href="#">GOOGLE+ LOGIN</a></li>
+	<li><a class="teal darken-4 white-text" href="#">CRICOMP SIGNUP</a></li>
+	</ul>
+	</div><!-- other-logins -->
+	</div>
+</div><!-- signup-form-screen -->
 <div id="master-wrapper">
-<div id="nav-gap"></div>
-<div id="fixed-nav">
- <nav>
+<nav class="row">
     <div class="nav-wrapper teal">
-      <a href="#" class="brand-logo">CRICOMP</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a id="signup-trigger-homepage" href="#">My Cricomp</a></li>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      
+      <ul class="hide-on-med-and-down">
         <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Blogs</a></li>
+        <li><a href="#">Team A vs Team B</a></li>
+        <li><a href="#">Player Profile</a></li>
+        <li><a href="#">Team Profile</a></li>
+        <li><a href="#">Grounds</a></li>
+        <li><a href="#">Predict It</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Live Score</a></li>
+      </ul>
+      <ul id="nav-mobile" class="side-nav">
+      <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">News</a></li>
         <li><a href="#">Blogs</a></li>
@@ -35,88 +98,7 @@
       </ul>
     </div>
   </nav>
-</div><!-- fixed-nav -->
-
-
-<div id="signup-form-screen">
-	<div class="card" id="signup-form-page">
-	<div class="row">
-	<div class="col s12">
-	<a href="#" id="close-signup-form">close</a>
-	</div>
-	</div>
-
-
-	<div id="login-form" class="row container">
-	<h5>LOGIN</h5>
-	<form name="user-login-form" method="post">
-	<div class="input-field col s5">
-		<input type="email" name="login-emailid" class="validate" required autofocus>
-		 <label for="email_id">Email Id</label>
-		</div>
-
-		<div class="input-field col s5">
-		<input type="password" name="login-password" required>
-		 <label for="password">Password</label>
-		</div>
-		<div class="center-form-btn input-field col s2">
-		<button class="btn">LOGIN</button>
-		</div>
-	</form>
-	</div><!-- login-form -->
-
-
-	<div id="signup-form">
-	<div class="row container">
-	<form name="signup-homepage-form" method="post" class="col s12">
-	<h5>SIGNUP - CREATE AN ACCOUNT</h5>
-		<div class="input-field col s12">
-		<input type="email" name="emailid" class="validate" required autofocus>
-		 <label for="email_id">Email Id</label>
-		</div>
-
-		<div class="input-field col s12">
-		<input type="password" name="password" required>
-		 <label for="password">Password</label>
-		</div>
-
-		<div class="input-field col s12">
-		<input type="password" name="re-password" required>
-		 <label for="password">Re-Password</label>
-		</div>
-
-
-		<div class="input-field col s12">
-		<input type="number" name="age" required>
-		<label for="age">Age</label>
-		</div>
-
-		<div class="center-form-btn input-field col s12">
-		<button class="btn">SIGNUP</button>
-		</div>
-
-		<div class="input-field col s12">
-		<p>All fields are mandatory.</p>
-		</div>
-
-	</form>
-	</div>
-	</div><!-- signup-form -->
-	</div>
-</div><!-- signup-form-screen -->
-{% block contentp1 %}{% endblock %}
-<div class="row">
-
-<div class="col s8">
-{% block contentp2 %}{% endblock %}
-</div>
-
-<div class="col s4 z-depth-2">
-<h3>NEWS</h3>
-</div>
-
-</div>
-
+{% block contentbody %}{% endblock %}
 <div id="sitemap">
 <footer class="page-footer teal">
           <div class="container">
@@ -146,7 +128,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-             <span id="year"></span> Copyright,Cricomp. All Rights Reserved.
+            © <span id="year"></span> Copyright,Cricomp. All Rights Reserved. 
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
