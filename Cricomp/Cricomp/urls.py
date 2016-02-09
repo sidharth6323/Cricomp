@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from views import base
+from views import base,index,signup
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^base/', base),
+    url(r'^index/', index),
+    url(r'^signup/', signup),
 ]

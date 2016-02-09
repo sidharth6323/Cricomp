@@ -7,4 +7,9 @@ import re
 def base(request):
 	return render_to_response("base.html",{})
 
+def index(request):
+	return render_to_response("index.html",{})
+
+def signup(request):
+	return render_to_response("signup.html",{})
 
