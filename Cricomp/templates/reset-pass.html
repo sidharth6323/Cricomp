@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block contentblock %}
+<div style="margin-top:-100px;width:98%;margin-left:1%;" id="reset-form">
+<div class="row">
+
+<div style="height:500px;" class="card col s12">
+<h2>NEW PASSWORD</h2>
+<form name="forgot-password" method="post" class="col s12">
+	<div class="row container">
+		<div class="input-field col s12">
+		<input type="password" name="password-main" class="validate" required autofocus>
+		 <label for="password_main">Password</label>
+		</div>
+		<div class="input-field col s12">
+		<input type="password" name="password-re" class="validate" required autofocus>
+		 <label for="password_re">Re-Password</label>
+		</div>
+
+
+		<div class="input-field col s12" id="homepage-signup-btn">
+		<button class="btn">RESET PASSWORD</button>
+		</div>
+
+
+	</div>
+	</form>
+
+</div>
+
+
+</div>
+</div><!-- reset-form -->
+
+{% endblock %}

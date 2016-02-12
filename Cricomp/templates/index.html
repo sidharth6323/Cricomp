@@ -1,59 +1,122 @@
 {% extends "base.html" %}
 {% load staticfiles %}
-{% block contentbody %}
-<div class="card z-depth-2" style="border-radius: 5px;">
-  <div class="card-content">
-    <span class="card-title">Live Matches</span>
-      <div class="row">
-        <div class="col s3">
-          <div class="card z-depth-1 blue-grey lighten-5" style="width:100%;">
-            <div class="card-content">
-              <span class="card-title">IND vs AUS
-              </span>
-              <p>Ind-200/0</p>
-            </div>
-            <div class="card-action ">
-              <a href="#"><span class="black-text">scorecard</span></a>
-              <a href="#"><span class="black-text">commentary</span></a>
-            </div>
-          </div>
-          </div>
-          <div class="col s3">
-            <div class="card z-depth-1 blue-grey lighten-5" style="width:100%;">
-              <div class="card-content">
-                <span class="card-title">SA vs ZIM</span>
-                <p>SA-100/4</p>
-              </div>
-              <div class="card-action ">
-                <a href="#"><span class="black-text">scorecard</span></a>
-                <a href="#"><span class="black-text">commentary</span></a>
-              </div>
-            </div></div>
+{% block scorecard %}
 
-          <div class="col s3">
-            <div class="card z-depth-1 blue-grey lighten-5" style="width:100%;">
-              <div class="card-content">
-                <span class="card-title">PAK vs WI</span>
-                <p>WI-10/1</p>
-              </div>
-              <div class="card-action ">
-                <a href="#"><span class="black-text">scorecard</span></a>
-                <a href="#"><span class="black-text">commentary</span></a>
-              </div>
+
+<div id="scoreboard">
+
+
+<div class="row">
+<div id="score-cards" style="margin-right:1%;" class="card grey darken-2 white-text col s12">
+<div>
+
+<h2>CRICOMP SCORE UPDATES</h2>
+
+
+<!-- loop from here -->
+<div class="col s3">
+<div class="green z-depth-5 darken-2 ">
+            <div class="card-content white-text">
+              <span class="card-title">India vs Aus</span>
+              <p>India: 200/0</p>
+            </div>
+            <div class="card-action  teal darken-1">
+              <a href="#"><span class="white-text">scorecard</span></a>
+              <a href="#"><span class="white-text">commentry</span></a>
             </div>
           </div>
-      </div>
+<br>
+</div>
+<!-- end of loop -->
 
-      <a class="waves-effect waves-light btn blue-grey darken-1" style="margin-left:40%;"><i class="material-icons left">stars</i>Predict and Win</a>
-
-
-
-
-
+<!-- delete this -->
+<div class="col s3">
+<div class="green z-depth-5 darken-2 ">
+            <div class="card-content white-text">
+              <span class="card-title">SA vs ZIM</span>
+              <p>SA:100/4</p>
             </div>
-
+            <div class="card-action  teal darken-1">
+              <a href="#"><span class="white-text">scorecard</span></a>
+              <a href="#"><span class="white-text">commentry</span></a>
+            </div>
           </div>
+
+
+
+<br>
+</div>
+<!-- delete this -->
+
+
+<a href="#">
+<div id="predict-to-win"  class="card col">
+<h2>
+Predict And Win! <span class="white-text material-icons">redeem</span>
+</h2>
+</div>
+</a>
+
+
+</div><!-- score-cards -->
+</div>
+</div>
+
+</div><!-- nav -->
+
+
+
+
+{% endblock %}
+
+
+{% block contentblock %}
+<div style="width:98%;margin-left: 1%;" id="main-content-body">
+<div class="row">
+<div class="card col s8">
+<div class="card col s12">
+<h2>GROUNDS</h2>
+<a href="#">Click here for more >></a>
+</div>
+
+
+
+<div class="card col s12">
+<h2>TEAM PROFILE</h2>
+<a href="#">Click here for more >></a>
+</div>
+
+<div class="card col s12">
+<div class="col s6">
+<h2>BLOGS</h2>
+<a href="#">Click here for more >></a>
+</div>
+
+
+<div class="col s6">
+<h2>TWEETS</h2>
+</div>
+
+</div>
 
 
 </div>
+
+<div class="card col s4">
+<div style="min-height:700px;" class="card col s11">
+<h2>NEWS</h2>
+<a href="#">Click here for more >></a>
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
 {% endblock %}
+
