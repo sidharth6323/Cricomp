@@ -2,16 +2,16 @@ import React from 'react';
 import Header from './Header';
 import Table from './Table';
 
-class Card extends React.Component
+
+//Stateless Card component containing the main card in the center of the layout
+const Card = function(props)
 {
-  render(){
     return(
       <div className="card">
         <Header/>
         <Table/>
       </div>
     )
-  }
 }
-
+//exporting the component for outside imports
 export default Card;

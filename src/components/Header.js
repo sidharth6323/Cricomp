@@ -1,15 +1,15 @@
 import React from 'react';
 
-class Header extends React.Component
+
+//Stateless Header component containing the header of the card
+const Header = function(props)
 {
-  render(){
     return(
       <div className="header">
         <span className="icon">S</span>
         <h2>Live Stocks App</h2>
       </div>
     )
-  }
 }
-
+//exporting the component for outside imports
 export default Header;

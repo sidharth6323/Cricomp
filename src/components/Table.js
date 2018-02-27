@@ -1,30 +1,31 @@
 import React from 'react';
 import TimeAgo from 'react-timeago'
 
+
+//Table component containing the main stocks table
 class Table extends React.Component
 {
   constructor(){
     super();
-    var ws = new WebSocket("ws://stocks.mnet.website");
+    var ws = new WebSocket("ws://stocks.mnet.website"); //opening the WebSocket connection
     this.state={};
-    ws.onopen = ()=>{console.log("connection is open");}
-    ws.onmessage = (evt)=> {
-        var received_msg = JSON.parse(evt.data);
-        received_msg.forEach(([name, price]) => {
-          let tempobj={};
-          var className="";
-          if(this.state[name])
-           className = this.state[name]["price"]>price?'red':'green';
-          tempobj[name]={"price":price,"time":new Date(),"className":className}
-          this.setState(tempobj);
-        });
-        console.log(this.state);
-    };
-    window.onbeforeunload = function(event) {
-      ws.close();
-    };
+    ws.onopen = ()=>{console.log("connection is open");}; //handle open event of WebSocket
+    ws.onmessage = (evt)=>{this.handleMessage(evt)};  //handle message event of WebSocket
+    window.onbeforeunload = (event)=>{ws.close()};  //close the connection of WebSocket
   }
-
+  //function to update stock data
+  handleMessage(evt){
+      var received_msg = JSON.parse(evt.data);
+      received_msg.forEach(([name, price]) => {
+        let tempobj={};
+        var className="";
+        if(this.state[name])
+         className = this.state[name]["price"]>price?'red':'green';
+        tempobj[name]={"price":price,"time":new Date(),"className":className}
+        this.setState(tempobj);
+      });
+      console.log(this.state);
+  };
   render(){
     return(
       <div className="table">
@@ -50,5 +51,5 @@ class Table extends React.Component
     )
   }
 }
-
+//exporting the component for outside imports
 export default Table;
