@@ -40,9 +40,53 @@ html, body, #root, .App {
       .App .card .header h2 {
         text-align: left;
         color: #6D435A; }
+    .App .card .table .spinner-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: all ease-in-out 0.5s; }
+      .App .card .table .spinner-container.hidden {
+        opacity: 0;
+        visibility: hidden; }
+      .App .card .table .spinner-container.visible {
+        opacity: 1;
+        visibility: visible; }
+    .App .card .table .half-circle-spinner, .App .card .table .half-circle-spinner * {
+      box-sizing: border-box; }
+    .App .card .table .half-circle-spinner {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      position: relative; }
+    .App .card .table .half-circle-spinner .circle {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      border: calc(30px / 10) solid transparent; }
+    .App .card .table .half-circle-spinner .circle.circle-1 {
+      border-top-color: #ff1d5e;
+      animation: half-circle-spinner-animation 0.7s infinite; }
+    .App .card .table .half-circle-spinner .circle.circle-2 {
+      border-bottom-color: #ff1d5e;
+      animation: half-circle-spinner-animation 0.7s infinite alternate; }
+
+@keyframes half-circle-spinner-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
     .App .card .table table {
       width: 100%;
-      margin-top: 5%; }
+      margin-top: 5%;
+      transition: all ease-in-out 0.5s; }
+      .App .card .table table.hidden {
+        opacity: 0;
+        visibility: hidden; }
+      .App .card .table table.visible {
+        opacity: 1;
+        visibility: visible; }
       .App .card .table table thead {
         box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.03);
         color: #FF576E;
@@ -61,6 +105,16 @@ html, body, #root, .App {
           text-transform: uppercase;
           font-weight: bolder;
           color: black; }
+          .App .card .table table tbody td.ticker .white {
+            margin-top: 6%;
+            width: 0;
+            height: 0;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            border-bottom: 12px solid white;
+            display: inline-block;
+            float: left;
+            transition: all ease-in-out 0.5s; }
           .App .card .table table tbody td.ticker .green {
             margin-top: 6%;
             width: 0;
