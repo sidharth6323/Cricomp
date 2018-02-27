@@ -5,7 +5,9 @@ html, body, #root, .App {
 
 @media (max-width: 480px) {
   .card {
-    width: 80% !important; } }
+    width: 80% !important; }
+  body {
+    font-size: 85%; } }
 
 .App {
   background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
@@ -77,6 +79,12 @@ html, body, #root, .App {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
     .App .card .table table {
       width: 100%;
       margin-top: 5%;
@@ -97,6 +105,8 @@ html, body, #root, .App {
           font-weight: bolder; }
       .App .card .table table tbody tr:first-child td {
         padding-top: 4%; }
+      .App .card .table table tbody tr {
+        animation: fadeIn 0.7s 1; }
       .App .card .table table tbody td {
         border-bottom: 1px solid #ddd;
         color: #0f0f0f;
@@ -138,4 +148,6 @@ html, body, #root, .App {
             transition: all ease-in-out 0.5s; }
         .App .card .table table tbody td.time {
           color: #888;
-          font-size: 0.8em; }
+          font-size: 0.8em;
+          width: 33% !important;
+          white-space: nowrap; }
